@@ -1,7 +1,7 @@
 {
   "name": "testing-codex-mcp-server",
   "version": "1.0.0",
-  "description": "Simple Express REST API",
+  "description": "Express REST API with MongoDB and Mongoose",
   "main": "src/server.js",
   "type": "commonjs",
   "scripts": {
@@ -12,11 +12,14 @@
   "keywords": [
     "express",
     "rest",
-    "api"
+    "api",
+    "mongoose",
+    "mongodb"
   ],
   "license": "MIT",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mongoose": "^8.10.1"
   },
   "devDependencies": {
     "supertest": "^7.1.1"
