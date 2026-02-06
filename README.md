@@ -1,6 +1,6 @@
-# Express REST API (Mongoose)
+# Express REST API (Mongoose) + React Frontend
 
-A REST API built with Express.js and MongoDB via Mongoose ORM.
+A full-stack app with an Express.js REST API, MongoDB via Mongoose ORM, and a React.js frontend that consumes the API.
 
 ## Setup
 
@@ -22,7 +22,16 @@ npm start
 
 The server runs on `http://localhost:3000` by default.
 
-## Endpoints
+## Frontend
+
+Open `http://localhost:3000` to use the React UI.
+
+The React app allows you to:
+- View users
+- Create users
+- Delete users
+
+## API Endpoints
 
 - `GET /health` - health check with DB connection status
 - `GET /api/users` - list users

@@ -1,10 +1,17 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 
 const User = require('./models/user');
 
 const app = express();
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '..', 'public')));
+
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+});
 
 app.get('/health', (req, res) => {
   const isConnected = mongoose.connection.readyState === 1;
@@ -85,7 +92,6 @@ app.use((error, req, res, next) => {
 
 app.use((error, req, res, next) => {
   res.status(500).json({ message: 'Internal server error' });
-  next();
 });
 
 module.exports = app;
